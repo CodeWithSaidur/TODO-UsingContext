@@ -1,7 +1,13 @@
+import { TodoProvider } from './context';
+
 export function App() {
   return (
     <div>
-      <h1>App</h1>
+      <TodoProvider>
+        <div>
+          
+        </div>
+      </TodoProvider>
     </div>
   )
 }
