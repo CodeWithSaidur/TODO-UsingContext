@@ -1,46 +1,14 @@
-import { useState } from 'react';
+import './index.css';  
 import { TodoProvider } from './context';
+import { TodoForm } from './components/TodoForm';
+import { TodoList } from './components/TodoList';
 
 export function App() {
-  const [todos, setTodos] = useState([]);
-
-  const addTodo = (todo) => {
-    setTodos((prev) => [
-      ...prev,
-      { ...todo, id: Date.now(), completed: false },
-    ]);
-  };
-
-  const updateTodo = (id, updatedTodo) => {
-    setTodos((prev) =>
-      prev.map((todo) =>
-        todo.id === id ? { ...todo, ...updatedTodo } : todo
-      )
-    );
-  };
-
-  const deleteTodo = (id) => {
-    setTodos((prev) => prev.filter((todo) => todo.id !== id));
-  };
-
-  const toggleStatus = (id) => {
-    setTodos((prev) =>
-      prev.map((todo) =>
-        todo.id === id
-          ? { ...todo, completed: !todo.completed } 
-          : todo
-      )
-    );
-  };
-
   return (
     <div>
-      <TodoProvider
-        value={{ todos, addTodo, updateTodo, deleteTodo, toggleStatus }}
-      >
-        <div>
-          
-        </div>
+      <TodoProvider>
+        <TodoForm />
+         <TodoList />
       </TodoProvider>
     </div>
   );

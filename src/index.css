@@ -1,0 +1,110 @@
+/* Reset and layout */
+div {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type='text'] {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input[type='text']:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  padding: 12px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Todo list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+li:hover {
+  background: #e9ecef;
+  transform: translateX(4px);
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+span {
+  flex: 1;
+  font-size: 16px;
+}
+
+span[style*='line-through'] {
+  color: #6c757d;
+}
+
+/* Empty state */
+p {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 40px;
+}
+
+li input[type='text'] {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+li span {
+  flex: 1;
+  padding: 4px 0;
+}
+
+li input[type='text']:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
